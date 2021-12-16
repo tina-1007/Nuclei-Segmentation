@@ -47,17 +47,23 @@ All images in `/images` and all masks in `/masks`
 ```
 python rename_image.py
 ```
+I also put my train and val annotation files in `/data/annotations`
+
+---
+
 The directory will looks like:
+```
 data
 |- annotation  -> Location of annotation.json
-|- new_train   -> Rearrange training data
-|- new_val     -> Rearrange validation data
+|- new_train   -> Rearranged training data
+|- new_val     -> Rearranged validation data
 |- test
 |- train
 |- val
 |- test_img_ids.json
 |- to_coco.py
 |- rename_image.py
+```
 
 ## Testing
 #### 1. Download the trained weights 
