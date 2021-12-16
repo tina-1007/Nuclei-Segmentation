@@ -16,7 +16,7 @@ Install MMDetection:
 pip install openmim
 mim install mmdet
 ```
-Or you can reference https://mmdetection.readthedocs.io/en/v2.19.1/get_started.html for more install tutorial.
+Or you can reference [here](https://mmdetection.readthedocs.io/en/v2.19.1/get_started.html) for more install instructions.
 
 ## Prepare data
 #### 1. Install relation package and go into `data` directory
