@@ -44,9 +44,9 @@ test_pipeline = [
 
 data = dict(
     samples_per_gpu=2,
-    workers_per_gpu=0,    
+    workers_per_gpu=0,
     train=dict(
-        type=dataset_type, 
+        type=dataset_type,
         ann_file=data_root + 'annotations/poly_nucleus_train.json',
         classes=classes,
         img_prefix=data_root + 'new_train/images/',
@@ -54,13 +54,13 @@ data = dict(
     val=dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/poly_nucleus_val.json',
-        classes=classes,        
+        classes=classes,
         img_prefix=data_root + 'new_val/images/',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
         ann_file=data_root + 'test_img_ids.json',
-        classes=classes,        
+        classes=classes,
         img_prefix=data_root + 'test/',
         pipeline=test_pipeline))
 
@@ -71,8 +71,8 @@ model = dict(
         init_cfg=dict(type='Pretrained',
                       checkpoint='torchvision://resnet101')),
     roi_head=dict(
-        bbox_head=dict(num_classes=1),
-    mask_head=dict(num_classes=1)))
+        bbox_head=dict(num_classes=1)),
+    mask_head=dict(num_classes=1))
 
 runner = dict(type='EpochBasedRunner', max_epochs=50)
 checkpoint_config = dict(interval=5)
