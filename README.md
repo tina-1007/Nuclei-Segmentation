@@ -65,7 +65,7 @@ Get my trained model from [here](https://drive.google.com/file/d/18n7ma7Fxx_Ctar
 
 #### 2. Inference
 ``` 
-CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/my_config  epoch_50.pth --format-only --options "jsonfile_prefix=./answer"
+CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/my_config.py  epoch_50.pth --format-only --options "jsonfile_prefix=./answer"
 ```
 The `answer.segm.json` is the file to submit.
 
