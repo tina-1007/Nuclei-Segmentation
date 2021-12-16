@@ -24,7 +24,18 @@ Or you can reference https://mmdetection.readthedocs.io/en/v2.19.1/get_started.h
 pip install scikit-image
 %cd data
 ```
-#### 2. Rearrange the images to new directory
+#### 2. Choose some training data as validation data
+```
+data
+|- test
+|- train -> 22 image directories
+  |- TCGA-18-5592-01Z-00-DX1
+  ...
+|- val   -> 2 image directories
+  |- TCGA-NH-A8F7-01A-01-TS1
+  |- TCGA-RD-A8N9-01A-01-TS1
+```
+#### 3. Rearrange the images to new directory
 - Put all nuclei images to same directory
 - For mask images, rename the file as `{image_filename}_{id}.png`
 ```
@@ -32,11 +43,21 @@ python rename_image.py
 ```
 All images in `/images` and all masks in `/masks`
 
-#### 3. Generate coco format annotation files
+#### 4. Generate coco format annotation files
 ```
 python rename_image.py
 ```
-The annotation files are under `annotation` directory
+The directory will looks like:
+data
+|- annotation  -> Location of annotation.json
+|- new_train   -> Rearrange training data
+|- new_val     -> Rearrange validation data
+|- test
+|- train
+|- val
+|- test_img_ids.json
+|- to_coco.py
+|- rename_image.py
 
 ## Testing
 #### 1. Download the trained weights 
