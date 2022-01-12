@@ -1,6 +1,6 @@
 # Nuclei-Segmentation
 
-This is my implement for [2021 VRDL HW2](https://codalab.lisn.upsaclay.fr/competitions/333?secret_key=3b31d945-289d-4da6-939d-39435b506ee5), which is an assignment to do instance segmentation on Nuclei Dataset.
+This is my implement for [2021 VRDL HW3](https://codalab.lisn.upsaclay.fr/competitions/333?secret_key=3b31d945-289d-4da6-939d-39435b506ee5), which is an assignment to do instance segmentation on Nuclei Dataset.
 
 I use toe toolbox [MMDetection](https://github.com/open-mmlab/mmdetection) to train my Mask R-CNN model.
 
